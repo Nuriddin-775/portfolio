@@ -1,0 +1,41 @@
+// Colors
+
+$clr_text: #212529;
+$clr_white: #fff;
+$clr_green: #7ee787;
+$clr_grey_500: #6b7280;
+$clr_bgd: #0d1117;
+$clr_border: #30363d;
+$clr_grey: #7d8590;
+
+$accent-brand-primary: #635bff;
+$clr_primary: #939aff;
+
+// Font family
+$font-family-primary: "DM Sans", sans-serif;
+
+// Flex
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin line-clamp2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
