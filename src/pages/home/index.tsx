@@ -9,8 +9,8 @@ function HomePage() {
     <div className="home">
       <Navbar />
       <HeroSection />
-      {/* <ServicesSection /> */}
       <ParallaxSection type={"services"} />
+      <ServicesSection />
       <ParallaxSection type={"portfolio"} />
     </div>
   );
