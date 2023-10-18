@@ -1,0 +1,63 @@
+@import "src/styles/variables.scss";
+
+.contact {
+  height: 100vh;
+  scroll-snap-align: center;
+  @include flex-center;
+  overflow: hidden;
+
+  &-content {
+    display: flex;
+    gap: 50px;
+  }
+
+  &-text {
+    flex: 1;
+
+    h1 {
+      font-size: 96px;
+      line-height: 88px;
+      margin-bottom: 40px;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      a {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &-form {
+    flex: 1;
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      path {
+        stroke-width: 0.2;
+        stroke: $clr_orange;
+      }
+    }
+
+    &-btn {
+      color: #000;
+      font-family: $font-family-primary;
+      font-weight: 500;
+      font-size: 18px;
+      &:hover {
+        color: #000 !important;
+        background-color: $clr_orange_hover !important;
+      }
+    }
+  }
+}

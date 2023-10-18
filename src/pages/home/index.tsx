@@ -1,3 +1,4 @@
+import ContactSection from "./components/contact/Contact";
 import HeroSection from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import ParallaxSection from "./components/parallax/Parallax";
@@ -14,6 +15,7 @@ function HomePage() {
       <ServicesSection />
       <ParallaxSection type={"portfolio"} />
       <PortfolioSection />
+      <ContactSection />
     </div>
   );
 }
