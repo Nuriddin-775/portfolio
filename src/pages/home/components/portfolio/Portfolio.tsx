@@ -11,7 +11,7 @@ interface Props {
 
 const Single = ({ title, img, desc }: Props) => {
   //For Card title
-  const ref = useRef();
+  const ref = useRef<any>();
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
@@ -31,7 +31,7 @@ const Single = ({ title, img, desc }: Props) => {
 
 function PortfolioSection() {
   // For Progress bar
-  const ref = useRef();
+  const ref = useRef<any>();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],

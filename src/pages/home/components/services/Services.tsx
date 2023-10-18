@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import "./services.scss";
 import { servicesCardData, varients } from "./constants";
-import { useRef } from "react";
 
 function ServicesSection() {
   return (

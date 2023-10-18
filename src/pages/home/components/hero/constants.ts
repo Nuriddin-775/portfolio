@@ -20,7 +20,8 @@ export const textVariants = {
     },
   },
 };
-export const sliderVariants = {
+
+export const sliderVariants: any = {
   initial: {
     x: 0,
   },

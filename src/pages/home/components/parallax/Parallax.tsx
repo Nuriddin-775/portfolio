@@ -3,7 +3,7 @@ import "./parallax.scss";
 import { useRef } from "react";
 
 function ParallaxSection({ type }: { type: string }) {
-  const ref = useRef();
+  const ref = useRef<any>();
 
   const { scrollYProgress } = useScroll({
     target: ref,

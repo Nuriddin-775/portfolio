@@ -47,7 +47,7 @@ function ContactSection() {
             whileInView={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
-            <PhoneIcon isInView />
+            <PhoneIcon isInView={isInView} />
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

@@ -21,15 +21,15 @@ export const servicesCardData = [
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe adipisci itaque optio consequatur, molestiae ipsa, eum dolorem quasi dolorum quos quis voluptatum facere deleniti unde!",
   },
   {
-    title: "Branding",
+    title: "Frontend",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe adipisci itaque optio consequatur, molestiae ipsa, eum dolorem quasi dolorum quos quis voluptatum facere deleniti unde!",
   },
   {
-    title: "Branding",
+    title: "Backend",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe adipisci itaque optio consequatur, molestiae ipsa, eum dolorem quasi dolorum quos quis voluptatum facere deleniti unde!",
   },
   {
-    title: "Branding",
+    title: "Javascript",
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe adipisci itaque optio consequatur, molestiae ipsa, eum dolorem quasi dolorum quos quis voluptatum facere deleniti unde!",
   },
 ];
