@@ -1,6 +1,67 @@
 @import "src/styles/variables.scss";
 
-.parallax-section {
-  height: 100vh;
-  scroll-snap-align: center;
+.portfolio {
+  height: 100%;
+
+  &-progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+
+    div {
+      height: 10px;
+      background-color: #fff;
+    }
+  }
+
+  &-wrapper {
+    scroll-snap-align: center;
+    height: 100vh;
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 45%;
+
+    img {
+      flex: 1;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    div {
+      flex: 1;
+
+      h2 {
+        font-size: 64px;
+        margin-bottom: 20px;
+        line-height: 1.05;
+      }
+      p {
+        font-size: 20px;
+        color: gray;
+      }
+      button {
+        background-color: orange;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        margin-top: 30px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e69500;
+        }
+      }
+    }
+  }
 }
