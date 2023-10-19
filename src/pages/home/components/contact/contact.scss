@@ -41,8 +41,13 @@
     flex: 1;
     position: relative;
 
+    &-form {
+      z-index: 2;
+    }
+
     &-icon {
       position: absolute;
+      z-index: 0;
       path {
         stroke-width: 0.2;
         stroke: $clr_orange;

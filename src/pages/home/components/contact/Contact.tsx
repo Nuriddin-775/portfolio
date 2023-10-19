@@ -3,11 +3,40 @@ import "./contact.scss";
 import { contactFormData, contactVariants } from "./constants";
 import { motion, useInView } from "framer-motion";
 import { PhoneIcon } from "src/assets";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactSection() {
   const ref = useRef<any>();
+  const formRef = useRef<any>();
+  const [form] = Form.useForm();
+
   const isInView = useInView(ref, { margin: "-100px" });
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (val: any) => {
+    console.log(val);
+
+    emailjs
+      .sendForm(
+        "service_2skaqci",
+        "template_cykrivh",
+        formRef.current,
+        "7FKKj8daskmdL26UM"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+          console.log(result.text);
+        },
+        (error) => {
+          setError(true);
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div id="Contact" className="contact container">
       <motion.div
@@ -54,7 +83,14 @@ function ContactSection() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
           >
-            <Form name="normal_login" className="form-form" layout={"vertical"}>
+            <Form
+              // ref={formRef}
+              form={form}
+              onSubmit={sendEmail}
+              name="normal_login"
+              className="form-form contact-form-form"
+              layout={"vertical"}
+            >
               {contactFormData.map((item) => {
                 return (
                   <Form.Item
@@ -92,6 +128,8 @@ function ContactSection() {
               >
                 Submit
               </Button>
+              {error && "Error"}
+              {success && "Success"}
             </Form>
           </motion.div>
         </div>
