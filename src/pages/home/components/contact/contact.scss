@@ -43,6 +43,21 @@
 
     &-form {
       z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      input,
+      textarea {
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        z-index: 10;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 1.4px;
+      }
     }
 
     &-icon {
@@ -56,11 +71,16 @@
 
     &-btn {
       color: #000;
+      background-color: $clr_orange;
+      padding: 10px;
+      border-radius: 10px;
       font-family: $font-family-primary;
+      border: none;
       font-weight: 500;
       font-size: 18px;
+      cursor: pointer;
+      z-index: 5;
       &:hover {
-        color: #000 !important;
         background-color: $clr_orange_hover !important;
       }
     }

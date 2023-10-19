@@ -9,19 +9,23 @@ import emailjs from "@emailjs/browser";
 function ContactSection() {
   const ref = useRef<any>();
   const formRef = useRef<any>();
-  const [form] = Form.useForm();
 
   const isInView = useInView(ref, { margin: "-100px" });
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const sendEmail = (val: any) => {
-    console.log(val);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    console.log(e);
 
     emailjs
       .sendForm(
         "service_2skaqci",
-        "template_cykrivh",
+        "template_wswvt1n",
         formRef.current,
         "7FKKj8daskmdL26UM"
       )
@@ -35,6 +39,10 @@ function ContactSection() {
           console.log(error.text);
         }
       );
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -83,54 +91,42 @@ function ContactSection() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
           >
-            <Form
-              // ref={formRef}
-              form={form}
+            <motion.form
+              ref={formRef}
               onSubmit={sendEmail}
               name="normal_login"
               className="form-form contact-form-form"
-              layout={"vertical"}
             >
-              {contactFormData.map((item) => {
-                return (
-                  <Form.Item
-                    name={item.name}
-                    rules={
-                      item.type === "email"
-                        ? [
-                            {
-                              type: "email",
-                              required: true,
-                              message: item.message2,
-                            },
-                          ]
-                        : [{ required: true, message: item.message }]
-                    }
-                    className={item.className}
-                    key={item.name}
-                  >
-                    {item.text ? (
-                      <Input.TextArea
-                        rows={4}
-                        maxLength={400}
-                        placeholder={item.placeholder}
-                      />
-                    ) : (
-                      <Input placeholder={item.placeholder} />
-                    )}
-                  </Form.Item>
-                );
-              })}
-              <Button
-                htmlType="submit"
-                className="contact-form-btn full"
-                type="primary"
-              >
+              <input
+                type="text"
+                value={name}
+                required
+                placeholder="Name"
+                name="name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                value={email}
+                required
+                placeholder="Email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <textarea
+                name="message"
+                value={message}
+                placeholder="Message"
+                cols={30}
+                rows={6}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+              <button className="contact-form-btn full" type="submit">
                 Submit
-              </Button>
-              {error && "Error"}
-              {success && "Success"}
-            </Form>
+              </button>
+              {/* {error && "Error"}
+              {success && "Success"} */}
+            </motion.form>
           </motion.div>
         </div>
       </motion.div>
