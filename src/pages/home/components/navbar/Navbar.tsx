@@ -15,13 +15,13 @@ function Navbar() {
           Nuriddin
         </motion.span>
         <div>
-          <a href="#">
+          <a href="#Contact">
             <img src="/img/linkedin.png" alt="social media image" />
           </a>
-          <a href="#">
+          <a href="#Contact">
             <img src="/img/github.png" alt="social media image" />
           </a>
-          <a href="#">
+          <a href="#Contact">
             <img src="/img/telegram.png" alt="social media image" />
           </a>
         </div>
