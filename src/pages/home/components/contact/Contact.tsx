@@ -11,8 +11,8 @@ function ContactSection() {
   const formRef = useRef<any>();
 
   const isInView = useInView(ref, { margin: "-100px" });
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [success, setSuccess] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
