@@ -31,11 +31,11 @@ function ContactSection() {
       )
       .then(
         (result) => {
-          setSuccess(true);
+          // setSuccess(true);
           console.log(result.text);
         },
         (error) => {
-          setError(true);
+          // setError(true);
           console.log(error.text);
         }
       );
