@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { sliderVariants, textVariants } from "./constants";
 import "./hero.scss";
-import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
