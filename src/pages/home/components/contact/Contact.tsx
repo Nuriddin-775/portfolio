@@ -1,6 +1,5 @@
-import { Button, Form, Input } from "antd";
 import "./contact.scss";
-import { contactFormData, contactVariants } from "./constants";
+import { contactVariants } from "./constants";
 import { motion, useInView } from "framer-motion";
 import { PhoneIcon } from "src/assets";
 import { useRef, useState } from "react";
