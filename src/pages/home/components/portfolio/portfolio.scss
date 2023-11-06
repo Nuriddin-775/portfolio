@@ -12,6 +12,11 @@
     color: $clr_orange;
     font-size: 36px;
 
+    @include mobile {
+      font-size: 24px;
+      padding-top: 80px;
+    }
+
     div {
       height: 10px;
       background-color: #fff;
@@ -31,23 +36,46 @@
     gap: 50px;
     height: 45%;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     img {
       flex: 1;
       height: 100%;
       object-fit: cover;
+
+      @include mobile {
+        width: 100%;
+        max-height: 300px;
+      }
     }
 
     div {
       flex: 1;
 
+      @include mobile {
+        transform: none !important;
+        align-items: center;
+        text-align: center;
+      }
+
       h2 {
         font-size: 64px;
         margin-bottom: 20px;
         line-height: 1.05;
+
+        @include mobile {
+          font-size: 36px;
+        }
       }
       p {
         font-size: 20px;
         color: gray;
+
+        @include mobile {
+          font-size: 16px;
+        }
       }
       button {
         background-color: orange;
