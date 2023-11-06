@@ -42,6 +42,10 @@ a {
 .container {
   width: 84%;
   margin: 0 auto;
+
+  @include mobile {
+    width: 90%;
+  }
 }
 
 .input {
@@ -63,3 +67,5 @@ a {
 .half {
   width: calc(50% - 1rem);
 }
+
+// 738 1024 1366

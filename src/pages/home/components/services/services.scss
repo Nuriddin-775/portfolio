@@ -15,6 +15,12 @@
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      text-align: center;
+      align-self: center;
+      flex-direction: column;
+    }
+
     p {
       font-size: 20px;
       color: gray;
@@ -26,6 +32,10 @@
       width: 500px;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
     }
   }
 
@@ -35,10 +45,20 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      width: 100%;
+    }
+
     &-text {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
     }
 
     img {
@@ -46,11 +66,20 @@
       height: 100px;
       border-radius: 50px;
       object-fit: cover;
+
+      @include mobile {
+        width: 200px;
+        height: 50px;
+      }
     }
 
     h1 {
       font-size: 88px;
       font-weight: 100;
+
+      @include mobile {
+        font-size: 36px;
+      }
     }
 
     button {
@@ -61,6 +90,12 @@
       border: none;
       font-size: 24px;
       cursor: pointer;
+
+      @include mobile {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+      }
 
       &:hover {
         background-color: $clr_orange_hover;
@@ -73,12 +108,32 @@
     display: flex;
     padding-bottom: 20px;
 
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      gap: 28px;
+    }
+
     &-card {
       padding: 36px;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
       gap: 16px;
+
+      @include mobile {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+        border: none;
+        padding: 0;
+      }
+
+      @include mobile {
+        p {
+          display: none;
+        }
+      }
 
       button {
         font-size: 16px;
@@ -87,6 +142,14 @@
         background-color: $clr_orange;
         border: none;
         cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          color: orange;
+          border-radius: 5px;
+          width: 50%;
+        }
 
         &:hover {
           background-color: $clr_orange_hover;

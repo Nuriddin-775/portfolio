@@ -22,7 +22,7 @@ export const PhoneIcon = (isInView: any) => (
 );
 
 export const MenuIcon = () => (
-  <svg width="23" height="23" viewBox="0 0 23 23">
+  <svg className="menu-icon" width="23" height="23" viewBox="0 0 23 23">
     <motion.path
       stroke-linejoin="round"
       strokeWidth="3"

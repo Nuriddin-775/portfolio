@@ -38,3 +38,21 @@ $font-family-primary: "DM Sans", sans-serif;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
+// Responsive
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}

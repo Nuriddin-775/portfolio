@@ -16,6 +16,11 @@
 
   h1 {
     font-size: 100px;
+
+    @include mobile {
+      font-size: 64px;
+      text-align: center;
+    }
   }
 
   &-mountains {
@@ -26,6 +31,11 @@
     height: 100%;
     position: absolute;
     z-index: 2;
+
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   &-planets {
     background-image: url("/img/planets.png");
@@ -35,6 +45,11 @@
     height: 100%;
     position: absolute;
     z-index: 3;
+
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
     &-light {
       background-image: url("/img/sun.png");

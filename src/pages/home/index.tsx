@@ -16,8 +16,8 @@ function HomePage() {
       <ParallaxSection type={"services"} />
       <ServicesSection />
       <ParallaxSection type={"portfolio"} />
-      <PortfolioSection />
-      <ContactSection />
+      {/* <PortfolioSection /> */}
+      {/* <ContactSection /> */}
     </div>
   );
 }

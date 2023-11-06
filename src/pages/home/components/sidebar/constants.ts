@@ -1,10 +1,12 @@
+import { isMobile } from "src/constants";
+
 export const sidebarVarients = {
   open: {
     clipPath: "circle(1200px at 50px 50px)",
     transition: { type: "spring", stiffness: 20 },
   },
   closed: {
-    clipPath: "circle(30px at 50px 50px)",
+    clipPath: `circle(${isMobile ? "24" : "30"}px at 50px 50px)`,
     transition: {
       delay: 0.5,
       type: "spring",
