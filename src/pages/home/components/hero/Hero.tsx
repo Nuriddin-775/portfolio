@@ -16,9 +16,7 @@ function HeroSection() {
         <motion.div className="hero-info-buttons" variants={textVariants}>
           <a href="#Portfolio">
             <motion.button variants={textVariants}>
-              <a href="https://docs.google.com/document/d/1vFroWIM_F3fGRlG_qC_kX3KB1kSsVyx-/edit?usp=drivesdk&ouid=105012808982979215914&rtpof=true&sd=true">
-                See the Latest Works
-              </a>
+              <a href="#Portfolio">See the Latest Works</a>
             </motion.button>
           </a>
           <a href="#Contact">
